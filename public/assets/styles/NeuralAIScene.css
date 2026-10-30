@@ -1,0 +1,32 @@
+.neural-ai-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  /* background: radial-gradient(circle at center, #0a1128 0%, #030712 100%); */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional glow aura behind the 3D canvas */
+.neural-ai-container::before {
+  content: '';
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.05));
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Canvas styling inside the host container */
+.neural-ai-container canvas {
+  position: relative;
+  z-index: 1;
+  display: block;
+  outline: none;
+}
